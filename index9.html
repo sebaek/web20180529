@@ -5,11 +5,20 @@
     <br>
     <input type="text" id="input2">
     <br>
-    <button id="button1">곱하기</button>
+    <button id="button1" onclick="multiply()">곱하기</button>
 
     <p>결과 : <span id="result"></span></p>
     <script>
-        
+
+    function multiply() {
+        var n1 = document.getElementById("input1").value;
+        var n2 = document.getElementById("input2").value;
+    
+        document.getElementById("result").innerHTML = n1 * n2;
+    }
+
+
+
     </script>
 </body>
 
