@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<body>
+    <input type="text" id="input1">
+    <br>
+    <input type="text" id="input2">
+    <br>
+    <button onclick="sub()">제외하고 출력</button>
+    <p id="result"></p>
+    <script>
+        function sub() {
+            var text1 = document.getElementById("input1").value;
+            var text2 = document.getElementById("input2").value;
+
+            // abcde
+            // bc
+            // ade
+
+            var leftPos = text1.indexOf(text2);
+            var rightPos = leftPos + text2.length;
+
+            var leftText = text1.substring(0, leftPos);
+            var rightText = text1.substring(rightPos);
+
+            document.getElementById("result").innerHTML = 
+                leftText + rightText;
+        }
+    </script>
+</body>
+</html>
