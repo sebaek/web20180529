@@ -1,0 +1,22 @@
+<!doctype html>
+
+<html>
+
+<body>
+    <input type="text" id="input1">
+    <br>
+    <input type="text" id="input2">
+    <br>
+    <button onclick="find()">찾아</button>
+    <p id="result"></p>
+    <script>
+        function find() {
+            var text1 = document.getElementById("input1").value;
+            var text2 = document.getElementById("input2").value;
+            var result = text1.indexOf(text2);
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
