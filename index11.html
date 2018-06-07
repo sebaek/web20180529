@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+
+<body>
+    <input type="text" id="input1">
+    <br>
+    <input type="text" id="input2">
+    <br>
+    <button onclick="sumLength()">더한 길이</button>
+    <p>두 텍스트를 더한 길이는
+        <span id="result"></span>입니다.</p>
+
+    <script>
+        function sumLength() {
+            var length1 = 
+                document.getElementById("input1").value.length;
+            var length2 = 
+                document.getElementById("input2").value.length;
+            document.getElementById("result").innerHTML =
+                length1 + length2 ;
+        }
+    </script>
+</body>
+
+</html>
