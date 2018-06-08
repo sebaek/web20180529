@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<body>
+    <input type="number" id="input1">
+    <br>
+    <input type="number" id="input2">
+    <br>
+    <button id="button1" onclick="displayMax();">큰 수</button>
+    <button id="button2" onclick="displayMin();">작은 수</button>
+    <p id="result"></p>
+    <script>
+        function displayMax() {
+            var n1 = document.getElementById("input1").value;
+            var n2 = document.getElementById("input2").value;
+            n1 = Number(n1);
+            n2 = Number(n2);
+
+            document.getElementById('result').innerHTML = 
+                Math.max(n1, n2);
+        }
+
+        function displayMin() {
+            var n1 = document.getElementById("input1").value;
+            var n2 = document.getElementById("input2").value;
+            n1 = Number(n1);
+            n2 = Number(n2);
+
+            document.getElementById('result').innerHTML = 
+                Math.min(n1, n2);
+        }
+    </script>
+</body>
+</html>
