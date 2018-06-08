@@ -9,10 +9,17 @@
     <script>
         var myArray = [];
         function show() {
+            var text = document.getElementById("input1").value;
+            var middle = myArray.length / 2;
+            myArray.splice(middle, 0, text, text);
 
+            document.getElementById("result").innerHTML = myArray;
         }
         function del() {
+            var middle = myArray.length / 2;
+            myArray.splice(middle - 1, 2);
 
+            document.getElementById("result").innerHTML = myArray;
         }
     </script>
 </body>
