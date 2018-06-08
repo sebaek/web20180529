@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <body>
-    <input type="text" id="input1">
+    <input type="text" id="input1" value="38742.343 298374.343">
     <!-- 38742.343 298374.343 -->
     <br>
     <button onclick="sum()" id="button1">더하기!!</button>
@@ -10,6 +10,19 @@
 
     <script>
         function sum() {
+            var txt = document.getElementById("input1").value;
+            console.log(txt);
+            var spacePos = txt.indexOf(" ");
+            console.log(spacePos);
+            var leftText = txt.substring(0, spacePos);
+            console.log(leftText);
+            var rightText = txt.substring(spacePos + 1);
+            console.log(rightText);
+            var leftNumber = Number(leftText);
+            var rightNumber = Number(rightText);
+
+            document.getElementById('result').innerHTML = 
+                leftNumber + rightNumber;
 
         }
     </script>
