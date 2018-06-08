@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<body>
+    <input type="text" id="input1">
+    <br>
+    <button id="button1" onclick="show();">추가</button>
+    <button id="button2" onclick="del();">삭제</button>
+    <p id="result"></p>
+
+    <script>
+        var myArray = [];
+
+        function show() {
+            var text = document.getElementById("input1").value;
+            myArray.push(text);
+            myArray.unshift(text);
+
+            document.getElementById("result").innerHTML =
+                myArray;
+        }
+
+        function del() {
+            myArray.shift();
+            myArray.pop();
+
+            document.getElementById("result").innerHTML =
+                myArray;
+        }
+    </script>
+</body>
+
+</html>

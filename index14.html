@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <body>
-    <input type="text" id="input1" value="38742.343 298374.343">
+    <input type="text" id="input1" value="38742.343   298374.343">
     <!-- 38742.343 298374.343 -->
     <br>
     <button onclick="sum()" id="button1">더하기!!</button>
@@ -20,6 +20,11 @@
             console.log(rightText);
             var leftNumber = Number(leftText);
             var rightNumber = Number(rightText);
+
+            var pattern = /\s+/;
+            var e = pattern.exec(txt);
+            console.log(e);
+            console.log(e.length);
 
             document.getElementById('result').innerHTML = 
                 leftNumber + rightNumber;
