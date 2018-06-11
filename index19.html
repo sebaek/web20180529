@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<style>
+    body {
+        font-size: 22px;
+    }
+    img {
+        height: 100px;
+        width: 100px;
+    }
+</style>
+
+<body>
+
+    <img src="앞.jpg" alt="동전" id="image1">
+    <br>
+    <button id="button1" onclick="coin();">동전던지기</button>
+    <br>
+    <script>
+        coin();
+        function coin() {
+            if (Math.random() < 0.5) {
+                document.getElementById("image1").src = "앞.jpg";
+            } else {
+                document.getElementById("image1").src = "뒤.jpg";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

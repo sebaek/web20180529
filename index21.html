@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<input type="number" id="input1"><br>
+<button id="button1" onclick="grade();">학점은?</button>
+<p id="result"></p>
+
+
+<script>
+function grade() {
+    var point = document.getElementById("input1").value;
+    point = Number(point);
+
+    var text = "";
+    if (90 <= point && point <= 100) {
+        text = "A 학점입니다.";
+    } else if (80 <= point && point < 90) {
+        text = "B 학점입니다.";
+    } else if (70 <= point && point < 80) {
+        text = "C 학점입니다.";
+    } else if (60 <= point && point < 70) {
+        text = "D 학점입니다.";
+    } else if (0 <= point && point < 60) {
+        text = "F 학점입니다.";
+    } else {
+        text = "올바른 값을 입력하세요.";
+    }
+    document.getElementById("result").innerHTML = text;
+}
+
+</script>
+</body>
+</html>

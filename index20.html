@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<style>
+    body {
+        font-size: 22px;
+    }
+    span {
+        background-color: white;
+        color: black;
+    }
+</style>
+<body>
+    <button id="button1" onclick="dice();">주사위 두 개 던지기</button>
+    <p>
+        <span id="span1"></span>와
+        <span id="span2"></span>이 나왔습니다.
+        <span id="span3"></span>
+    </p>
+    <br>
+    <script>
+        function dice() {
+            var dice1 = Math.floor(Math.random() * 6) + 1;
+            var dice2 = Math.floor(Math.random() * 6) + 1;
+
+            document.getElementById("span1").innerHTML = dice1;
+            document.getElementById("span2").innerHTML = dice2;
+
+            if (dice1 == dice2) {
+                document.getElementById("span3").innerHTML = "더블 입니다.";
+            } else {
+                document.getElementById("span3").innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
