@@ -18,19 +18,19 @@
     </p>
     <br>
     <script>
-        function dice() {
-            var dice1 = Math.floor(Math.random() * 6) + 1;
-            var dice2 = Math.floor(Math.random() * 6) + 1;
+function dice() {
+    var dice1 = Math.floor(Math.random() * 6) + 1;
+    var dice2 = Math.floor(Math.random() * 6) + 1;
 
-            document.getElementById("span1").innerHTML = dice1;
-            document.getElementById("span2").innerHTML = dice2;
+    document.getElementById("span1").innerHTML = dice1;
+    document.getElementById("span2").innerHTML = dice2;
 
-            if (dice1 == dice2) {
-                document.getElementById("span3").innerHTML = "더블 입니다.";
-            } else {
-                document.getElementById("span3").innerHTML = "";
-            }
-        }
+    if (dice1 == dice2) {
+        document.getElementById("span3").innerHTML = "더블 입니다.";
+    } else {
+        document.getElementById("span3").innerHTML = "";
+    }
+}
     </script>
 </body>
 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #result div {
+            display: inline-block;
+            margin: 15px;
+            height: 100px;
+            width: 100px;
+            line-height: 100px;
+            font-size: 50px;
+            text-align: center;
+            font-weight: 900;
+            background-color: khaki;
+            color: black;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <button id="button1" onclick="lotto();">로또 추첨</button>
+    <div id="result"></div>
+
+    <script>
+        function lotto() {
+            var lottoNumbers = [];
+            while (lottoNumbers.length < 6) {
+                var num = Math.floor(Math.random() * 45) + 1;
+                if (lottoNumbers.indexOf(num) === -1) {
+                    lottoNumbers.push(num);
+                }
+            }
+
+            var text = "";
+            for (var i = 0; i < lottoNumbers.length; i++) {
+                text += "<div>" + lottoNumbers[i] + "</div>";
+            }
+
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+    
+</body>
+</html>
