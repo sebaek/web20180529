@@ -12,7 +12,8 @@
         </style>
     </head>
 <body>
-    <button onclick="gugudan();">구구단 2~9 출력 </button>
+    <input type="number" id="input1">
+    <button onclick="gugudan();">구구단 2~9 출력 (하나 빼고)</button>
     <div id="result">
 
     </div>
@@ -20,9 +21,14 @@
     <script>
         gugudan();
         function gugudan() {
+            var num = document.getElementById("input1").value;
+            num = Number(num);
             var text = "";
 
             for (var i = 2; i <= 9; i++) {
+                if (i === num) {
+                    continue;
+                }
                 text += "<p>";
                 for (var j = 1; j <= 9; j++) {
                     text += i + " &times; " + j + " = " + (i * j) + "<br>";
