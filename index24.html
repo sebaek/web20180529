@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        #result p {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 15px;
+            margin: 15px;
+        }
+
+        </style>
+    </head>
+<body>
+    <button>구구단 2~9 출력 </button>
+    <div id="result">
+
+    </div>
+
+    <script>
+        gugudan();
+        function gugudan() {
+            var text = "";
+
+            for (var i = 2; i <= 9; i++) {
+                text += "<p>";
+                for (var j = 1; j <= 9; j++) {
+                    text += i + " &times; " + j + " = " + (i * j) + "<br>";
+                }
+                text += "</p>";
+            }
+
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
