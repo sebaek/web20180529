@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="text" id="input1">
+    <br>
+    <button id="button1" id="button1" onclick="point();">점수는?</button>
+    <p id="result"></p>
+    <script>
+        function point() {
+            var grade = document.getElementById("input1").value;
+            grade = grade.toUpperCase();
+            var text = "";
+
+            switch (grade) {
+                case "A":
+                    text = "90점 이상 100점 이하입니다.";
+                    break;
+                case "B":
+                    text = "80점 이상 90점 미만입니다.";
+                    break;
+                case "C":
+                    text = "70점 이상 80점 미만입니다.";
+                    break;
+                case "D":
+                    text = "60점 이상 70점 미만입니다.";
+                    break;
+                case "F":
+                    text = "60점 미만입니다.";
+                    break;
+                default:
+                    text = "올바른 값을 입력해주세요.";
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>

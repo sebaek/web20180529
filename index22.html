@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <input type="number" id="input1">
+    <br>
+    <button id="button1" onclick="gugudan();">구구단</button>
+    <p id="result"></p>
+
+    <script>
+        function gugudan() {
+            var n = Number(document.getElementById("input1").value);
+            var text = "";
+            for (var i = 1; i <= 9; i++) {
+                text += n + " &times; " + i + " = " + (n * i) + "<br>";
+            }
+            document.getElementById("result").innerHTML = text;
+        }
+    </script>
+</body>
+
+</html>
