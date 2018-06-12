@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+        #result p {
+            display: inline-block;
+            border: 1px solid black;
+            padding: 15px;
+            margin: 15px;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function () {
+            gugudan();
+            function gugudan() {
+                var text = "";
+
+                for (var i = 2; i <= 9; i++) {
+                    text += "<p>";
+                    for (var j = 1; j <= 9; j++) {
+                        text += i + " &times; " + j + " = " + (i * j) + "<br>";
+                    }
+                    text += "</p>";
+                }
+
+                document.getElementById("result").innerHTML = text;
+            }
+
+            $("button").click(gugudan);
+        });
+
+    </script>
+</head>
+
+<body>
+    <button>구구단 2~9 출력 </button>
+    <div id="result">
+
+    </div>
+
+
+</body>
+
+</html>
