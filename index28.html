@@ -18,6 +18,7 @@
         $(document).ready(function () {
             gugudan();
             function gugudan() {
+                console.log("gugudan");
                 var text = "";
 
                 for (var i = 2; i <= 9; i++) {
@@ -29,6 +30,10 @@
                 }
 
                 document.getElementById("result").innerHTML = text;
+
+                $("p").click(function() {
+                    $(this).hide();
+                });
             }
 
             $("button").click(gugudan);
