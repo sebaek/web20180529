@@ -10,22 +10,42 @@
 
     h2 {
         border-bottom: 1px solid black;
+        margin-bottom: 0px;
     }
     </style>
+
+    <script>
+    $(document).ready(function() {
+        // $("h2").click(function() {
+        //     $(this).next().toggle(500);
+        // });
+        $("#head1").click(function() {
+            $("#para1").toggle(500);
+        });
+
+        $("#head2").click(function() {
+            $("#para2").toggle(500);
+        });
+
+        $("#head3").click(function() {
+            $("#para3").toggle(500);
+        });
+    });
+    </script>
 </head>
 
 <body>
     <div>
-        <h2>Lorem, ipsum.</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis unde, eligendi soluta officiis exercitationem eveniet praesentium ex dolore, adipisci non rem dolores ut vel eius corporis possimus. Minima, aperiam modi ullam atque minus voluptas hic reiciendis possimus suscipit molestiae, laudantium blanditiis quisquam dolorem distinctio animi illo alias quibusdam, sunt in.</p>
+        <h2 id="head1">Lorem, ipsum.</h2>
+        <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis unde, eligendi soluta officiis exercitationem eveniet praesentium ex dolore, adipisci non rem dolores ut vel eius corporis possimus. Minima, aperiam modi ullam atque minus voluptas hic reiciendis possimus suscipit molestiae, laudantium blanditiis quisquam dolorem distinctio animi illo alias quibusdam, sunt in.</p>
     </div>
     <div>
-        <h2>Ut, dolores?</h2>
-        <p>Tenetur quam velit perspiciatis reprehenderit voluptatem vel iusto? Harum laboriosam dignissimos eius omnis vero sunt repellat consequuntur atque similique soluta. Repudiandae ut saepe impedit molestiae exercitationem hic minus blanditiis temporibus nisi reprehenderit rem corrupti obcaecati autem qui voluptatem eum inventore quo deleniti, placeat suscipit soluta cupiditate! Laudantium eveniet amet nostrum.</p>
+        <h2 id="head2">Ut, dolores?</h2>
+        <p id="para2">Tenetur quam velit perspiciatis reprehenderit voluptatem vel iusto? Harum laboriosam dignissimos eius omnis vero sunt repellat consequuntur atque similique soluta. Repudiandae ut saepe impedit molestiae exercitationem hic minus blanditiis temporibus nisi reprehenderit rem corrupti obcaecati autem qui voluptatem eum inventore quo deleniti, placeat suscipit soluta cupiditate! Laudantium eveniet amet nostrum.</p>
     </div>
     <div>
-        <h2>Numquam, quisquam?</h2>
-        <p>Animi saepe, optio labore cumque earum quam alias, commodi atque incidunt accusamus possimus? Sapiente dolore praesentium corporis cum expedita eius numquam debitis a distinctio repudiandae sunt placeat inventore ullam tempore velit similique at doloremque, illum quos in autem odit dignissimos dolores. Voluptatem perspiciatis nobis facilis aliquam, illo excepturi veritatis quam?</p>
+        <h2 id="head3">Numquam, quisquam?</h2>
+        <p id="para3">Animi saepe, optio labore cumque earum quam alias, commodi atque incidunt accusamus possimus? Sapiente dolore praesentium corporis cum expedita eius numquam debitis a distinctio repudiandae sunt placeat inventore ullam tempore velit similique at doloremque, illum quos in autem odit dignissimos dolores. Voluptatem perspiciatis nobis facilis aliquam, illo excepturi veritatis quam?</p>
     </div>
 
 
