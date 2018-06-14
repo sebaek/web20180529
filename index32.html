@@ -16,7 +16,8 @@
         $(document).ready(function () {
             $("#button1").click(function() {
                 var text = $("#input1").val();
-                $("#target").append("<li>" + text + "</li>");
+                var newLi = $("<li />").text(text);
+                $("#target").append(newLi);
             });
         });
 
