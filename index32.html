@@ -17,6 +17,9 @@
             $("#button1").click(function() {
                 var text = $("#input1").val();
                 var newLi = $("<li />").text(text);
+                newLi.click(function() {
+                    $(this).remove();
+                });
                 $("#target").append(newLi);
             });
         });
