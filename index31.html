@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        * {
+            font-size: 24px;
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            function cal() {
+                var op = $("#select1").val();
+                var left = Number($("#input1").val());
+                var right = Number($("#input2").val());
+                var result = 0;
+
+                switch (op) {
+                    case "add":
+                        result = left + right;
+                        break;
+                    case "sub":
+                        result = left - right;
+                        break;
+                    case "time":
+                        result = left * right;
+                        break;
+                    case "divide":
+                        result = left / right;
+                        break;
+                    default:
+                        result = NaN;
+                }
+
+                $("#result").text(result);
+
+            }
+
+            $("#input1").change(cal);
+            $("#input2").change(cal);
+            $("#select1").change(cal);
+        });
+    </script>
+</head>
+
+<body>
+    <input type="number" id="input1">
+    <br>
+    <select id="select1">
+        <option value="add">&plus;</option>
+        <option value="sub">&minus;</option>
+        <option value="time">&times;</option>
+        <option value="divide">&divide;</option>
+    </select>
+    <br>
+    <input type="number" id="input2">
+    <p id="result"></p>
+</body>
+
+</html>
