@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        * {
+            font-size: 24px;
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#button1").click(function() {
+                var text = $("#input1").val();
+                $("#target").append("<li>" + text + "</li>");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <button id="button1">&plus;</button>
+    <ul id="target"></ul>
+</body>
+
+</html>

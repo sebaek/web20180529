@@ -15,36 +15,37 @@
     <script>
         $(document).ready(function () {
             function cal() {
+                var num1 = Number($("#input1").val());
+                var num2 = Number($("#input2").val());
                 var op = $("#select1").val();
-                var left = Number($("#input1").val());
-                var right = Number($("#input2").val());
                 var result = 0;
 
                 switch (op) {
                     case "add":
-                        result = left + right;
+                        result = num1 + num2;
                         break;
                     case "sub":
-                        result = left - right;
+                        result = num1 - num2;
                         break;
                     case "time":
-                        result = left * right;
+                        result = num1 * num2;
                         break;
                     case "divide":
-                        result = left / right;
+                        result = num1 / num2;
                         break;
                     default:
-                        result = NaN;
+                        result = 0;
                 }
 
                 $("#result").text(result);
-
             }
 
             $("#input1").change(cal);
             $("#input2").change(cal);
             $("#select1").change(cal);
+
         });
+
     </script>
 </head>
 
