@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        * {
+            font-size: 24px;
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#button1").click(function() {
+                var $input1 = $("#input1");
+                var text = $input1.val();
+                var newButton = $("<button>&minus;</button>");
+                newButton.click(function() {
+                    $(this).parent().remove();
+                });
+                var newLi = $("<li />").text(text)
+                                       .append(newButton);
+                
+                $("#target").append(newLi);
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <button id="button1">&plus;</button>
+    <ul id="target"></ul>
+</body>
+
+</html>
