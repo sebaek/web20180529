@@ -1,0 +1,33 @@
+.my-container {
+
+    margin-top: 20px;
+}
+
+.my-footer-container {
+    background-color: black;
+    padding-top: 20px;
+    padding-bottom: 100px;
+}
+
+.my-footer-container * {
+    border: none;
+    background-color: black;
+    color: white;
+    
+}
+
+.my-footer-container .list-group-item {
+    border: none;
+    background-color: black;
+    color: white;
+    
+}
+
+#footer-logo {
+    color: white;
+
+}
+
+.logo-container {
+    text-align: center;
+}
